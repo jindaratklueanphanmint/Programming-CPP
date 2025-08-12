@@ -1,4 +1,5 @@
 
+
 #include <iostream>
 #include <cmath>
 
@@ -63,6 +64,27 @@ class DTriangle : public Triangle {
 		std::cout << "Area of 3D Triangle is " << (0.5 * base * height * depth) << std::endl;
 	}
 };
+
+class DRectangle : public Rectangle {
+	public:	
+	DRectangle(){
+		base = 10; height = 2; depth = 3;
+	}
+	void findArea() {
+		std::cout << "Area of 3D Rectangle is " << (width * length * depth) << std::endl;
+	}
+};
+
+class DCircle : public Circle {
+	public:	
+	DCircle(double rr){
+	  radius = 0; M_PI = 3.14; depth = 3;
+	}
+	void findArea() {
+		std::cout << "Area of 3D Circle is " << (M_PI * radius * radius * depth) << std::endl;
+	}
+};
+
 int main() {
 	Triangle tr;
 	tr.findArea();
@@ -79,6 +101,14 @@ int main() {
 	DTriangle tr3;
 	tr3.findArea();
 	tr3.perimeter();
+	
+	DRectangle rec3;
+	rec3.findArea();
+	rec3.perimeter();
+	
+	DCircle cr3;
+	cr3.findArea();
+	cr3.perimeter();
 
 	return 0;
 }
