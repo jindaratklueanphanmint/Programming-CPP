@@ -76,7 +76,7 @@ class DRectangle : public Rectangle {
 class DCircle : public Circle {
 	public:	
 	DCircle(double rr){
-	  radius = 0; M_PI = 3.14; depth = 3;
+	  M_PI = 3.14; radius = 0; depth = 3;
 	}
 	void findArea() {
 		std::cout << "Area of 3D Circle is " << (M_PI * radius * radius * depth) << std::endl;
